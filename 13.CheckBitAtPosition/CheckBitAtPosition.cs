@@ -12,7 +12,7 @@ class CheckBitAtPosition
         int indexP = int.Parse(Console.ReadLine());
 
         Console.WriteLine("Binary representation of n");
-        Console.WriteLine(Convert.ToString(numberN, 2));
+        Console.WriteLine(Convert.ToString(numberN, 2).PadLeft(16, '0'));
 
         int moveNumberN = numberN >> indexP;
         bool isBitValue1 = (moveNumberN & 1) == 1;

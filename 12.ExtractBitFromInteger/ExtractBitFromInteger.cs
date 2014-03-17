@@ -9,7 +9,8 @@ class ExtractBitFromInteger
         int numberN = int.Parse(Console.ReadLine());
         Console.WriteLine("Enter index p");
         int indexP = int.Parse(Console.ReadLine());
-
+        Console.WriteLine("Binary representation of n");
+        Console.WriteLine(Convert.ToString(numberN, 2).PadLeft(16, '0'));
         int moveNumberN = numberN >> indexP;
         int bit = moveNumberN & 1;
         Console.WriteLine("The value of the given bit at index p is");
