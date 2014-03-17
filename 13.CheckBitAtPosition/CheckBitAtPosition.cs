@@ -11,6 +11,14 @@ class CheckBitAtPosition
         Console.WriteLine("Enter index p");
         int indexP = int.Parse(Console.ReadLine());
 
+        Console.WriteLine("Binary representation of n");
+        Console.WriteLine(Convert.ToString(numberN, 2));
+
+        int moveNumberN = numberN >> indexP;
+        bool isBitValue1 = (moveNumberN & 1) == 1;
+
+        Console.WriteLine("Does the bit at position p have value 1?");
+        Console.WriteLine(isBitValue1);
     }
 }
 
