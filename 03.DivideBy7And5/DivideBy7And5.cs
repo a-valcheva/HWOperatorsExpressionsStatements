@@ -7,7 +7,7 @@ class DivideBy7And5
     {
         Console.WriteLine("Enter an integer number:");
         int number = int.Parse(Console.ReadLine());
-        bool isDivided = number % 35 == 0;//Least common multiple of 7 and 5 is 35.
+        bool isDivided = number % 35 == 0 && number != 0;//Least common multiple of 7 and 5 is 35.
         Console.WriteLine("Is the number divided (without remainder) by 7 and 5 in the same time?\n{0}", isDivided);
     }
 }

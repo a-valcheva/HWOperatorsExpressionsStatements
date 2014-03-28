@@ -17,14 +17,26 @@ class ModifyBit
         Console.WriteLine("Binary representation of n");
         Console.WriteLine(Convert.ToString(numberN, 2).PadLeft(16,'0'));
 
-        int mask = bitValue << indexP;
-        int result = numberN | mask;
+        //int mask = bitValue << indexP;
+        //int result = numberN | mask;
+        //if (bitValue == 0)
+        //{
+        //    mask = ~(1 << indexP);
+        //    result = numberN & mask;
+        //}
+        int mask;
+        int result;
         if (bitValue == 0)
         {
             mask = ~(1 << indexP);
             result = numberN & mask;
         }
-        
+        else
+        {
+            mask = bitValue << indexP;
+            result = numberN | mask;
+        }
+
         Console.WriteLine("Binary result");
         Console.WriteLine(Convert.ToString(result, 2).PadLeft(16, '0'));
         Console.WriteLine("Decimal result");
